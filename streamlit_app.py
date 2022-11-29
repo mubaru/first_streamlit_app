@@ -58,7 +58,7 @@ streamlit.header('Add a new fruit to our list')
 # add a function to add a new fruit to the fruit list
 def insert_row_snowflake(new_fruit):
   with my_cnx2.cursor() as my_cur2:
-    my_cur2.execute("insert into fruit_load_list values ('from streamlit')")
+    my_cur2.execute("insert into fruit_load_list values ('"new_fruit"')")
     return "Thanks for adding "+new_fruit
 
 # input text to add later
